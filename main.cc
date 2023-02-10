@@ -1,6 +1,6 @@
 #include <drogon/drogon.h>
 #include <chrono>
-#define USE_POSTGRESQL
+
 using namespace drogon;
 using namespace drogon::orm;
 using namespace std::chrono_literals;

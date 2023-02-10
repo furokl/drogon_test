@@ -5,6 +5,6 @@
     "dbname": "furokl",
     "schema": "public",
     "user": "postgres",
-    "password": "aA556831262aA",
+    "password": "postgres",
     "tables": []
 }
