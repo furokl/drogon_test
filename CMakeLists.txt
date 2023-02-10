@@ -1,6 +1,7 @@
 cmake_minimum_required (VERSION 3.5)
 
 set(PROJECT_NAME drogon_test)
+set(CMAKE_CXX_STANDARD 20)
 
 project(${PROJECT_NAME} CXX)
 
@@ -8,21 +9,18 @@ include(CheckIncludeFileCXX)
 
 check_include_file_cxx(any HAS_ANY)
 check_include_file_cxx(string_view HAS_STRING_VIEW)
-if(HAS_ANY AND HAS_STRING_VIEW)
-    set(CMAKE_CXX_STANDARD 17)
-else()
-    set(CMAKE_CXX_STANDARD 14)
-endif()
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(SOURCES 
 	main.cc 
-	LogoutPage.cc 
-	LogoutPage.h 
-	LoginPage.cc 
-	LoginPage.h)
+	views/LogoutPage.cc 
+	views/LogoutPage.h 
+	views/LoginPage.cc 
+	views/LoginPage.h 
+    	models/Account.cc 
+    	models/Account.h)
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 

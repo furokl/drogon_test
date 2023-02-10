@@ -7,9 +7,24 @@
     }
   ],
   "app": {
-    "threads_num": 12,
+    "threads_num": 16,
     "document_root": "../front",
+    "enable_session": true,
+    "session_timeout": 1200
     //"home_page": "",
     //"enable_server_header": true
-  }
+  },
+  "db_clients": [
+    {
+      "name": "furokl_db",
+      "rdbms": "postgresql",
+      "host": "127.0.0.1",
+      "port": 5432,
+      "dbname": "furokl",
+      "user": "postgres",
+      "passwd": "aA556831262aA",
+      "is_fast": false,
+      "connection_number": 1
+    }
+  ]
 }
